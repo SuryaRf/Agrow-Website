@@ -12,14 +12,13 @@
   border: none;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
-
 }
 
 .navbar {
@@ -80,10 +79,115 @@ body {
   color: #0eb10e;
 }
 
+/* Navbar Search Form */
+
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7;
+  background-color: #b4f3b4;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: #b4f3b4;
+  padding: 1rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-left: 1rem;
+  color: black;
+}
+
 #menu {
   display: none;
 }
 
+/* Product section */
+.products .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.products .product-card {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 2rem;
+}
+
+.products .product-icon {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.products .product-icon a {
+  width: 4rem;
+  height: 4rem;
+  color: #e5f3ea;
+  margin: 0.3rem;
+  border: 1px solid #e5f3ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products .product-icon a:hover {
+  background-color: #2ee92e;
+  border: 1px solid #b4f3b4;
+}
+
+.products .product-image{
+  padding: 1rem 0rem;
+
+}
+.products .product-image img{
+  height: 25rem;
+
+}
+
+
+.products .product-content h3{
+  font-size: 2rem;
+}
+
+.products .product-stars{
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  fill: #11cc11;
+}
+.products .product-stars .star-full{
+
+  fill: #11cc11;
+}
+
+.products .product-price{
+  font-size: 1.3rem;
+  font-weight: bold;
+  
+}
+.products .product-price span{
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 1rem;
+}
 /* hero section */
 
 .hero {
@@ -155,13 +259,14 @@ body {
 
 .about,
 .products,
-.contact {
+.products .contact {
   padding: 8rem 7% 1.4rem;
 }
 
 .about h2,
 .products h2,
-.contact h2 {
+.contact h2,
+.products h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
@@ -170,7 +275,7 @@ body {
 
 .about h2 span,
 .products h2 span,
-.contact h2 span {
+.contact h2 span .products h2 span {
   color: #2ee92e;
 }
 
@@ -309,25 +414,23 @@ body {
 /* footer section */
 
 footer {
-background-color: #b4f3b4;
-text-align: center;
-padding: 1rem 0 3rem;
-margin-top: 3rem;
-
+  background-color: #b4f3b4;
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
 }
 
 footer .social {
   padding: 1rem 0;
-
 }
 
-footer .social a{
+footer .social a {
   color: #000000;
   margin: 1rem;
 }
 
 footer .social a:hover,
-footer .links a:hover{
+footer .links a:hover {
   color: #2ee92e;
 }
 
@@ -338,10 +441,9 @@ footer .links {
 footer .links a {
   color: #000000;
   padding: 0.7rem 1rem;
-  
 }
 
-footer .credit{
+footer .credit {
   font-size: 0.8rem;
 }
 
@@ -349,7 +451,6 @@ footer .credit a {
   color: #0eb10e;
   font-weight: 700;
 }
-
 
 /* Media Queries */
 
@@ -402,6 +503,11 @@ footer .credit a {
     flex-wrap: wrap;
   }
 
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+
   .about .row .about-img img {
     height: 24rem;
     object-fit: cover;
@@ -421,11 +527,11 @@ footer .credit a {
     flex-wrap: wrap;
   }
 
-  .contact .row .map{
+  .contact .row .map {
     height: 30rem;
   }
 
-  .contact .row form{
+  .contact .row form {
     padding-top: 0;
   }
 }
