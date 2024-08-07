@@ -26,7 +26,7 @@
 
       <div class="navbar-extra">
         <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="produk"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
         <a href="#" id="menu"><i data-feather="menu"></i></a>
       </div>
       <!-- Search Form Start-->
@@ -36,6 +36,55 @@
       
       </div>
       <!-- Search Form End-->
+
+      <!-- Shopping Cart Start-->
+
+
+      <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="img/produk1.jpg" alt="produk 1">
+          <div class="item-detail">
+            <h3>
+              Pupuk Organik Cair </h3>
+              <div class="item-price">IDR 40K</div>
+
+        </div>
+        <i data-feather="trash-2"  class="remove-item"></i>
+      </div>
+      <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="img/produk1.jpg" alt="produk 1">
+          <div class="item-detail">
+            <h3>
+              Pupuk Organik Cair </h3>
+              <div class="item-price">IDR 40K</div>
+
+        </div>
+        <i data-feather="trash-2"  class="remove-item"></i>
+      </div>
+      <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="img/produk1.jpg" alt="produk 1">
+          <div class="item-detail">
+            <h3>
+              Pupuk Organik Cair </h3>
+              <div class="item-price">IDR 40K</div>
+
+        </div>
+        <i data-feather="trash-2"  class="remove-item"></i>
+      </div>
+      <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="img/produk1.jpg" alt="produk 1">
+          <div class="item-detail">
+            <h3>
+              Pupuk Organik Cair </h3>
+              <div class="item-price">IDR 40K</div>
+
+        </div>
+        <i data-feather="trash-2"  class="remove-item"></i>
+      </div>
+      <!-- Shopping Cart End-->
     </nav>
 
     <!-- hero section start-->
@@ -172,7 +221,7 @@
         <div class="product-card">
           <div class="product-icon">
             <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#"><i data-feather="eye"></i></a>
+            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
           </div>
           <div class="product-image">
             <img src="img/produk1.jpg" alt="produk1">
@@ -218,10 +267,10 @@
         <div class="product-card">
           <div class="product-icon">
             <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#"><i data-feather="eye"></i></a>
+            <a href="#" ><i data-feather="eye"></i></a>
           </div>
           <div class="product-image">
-            <img src="produk1.jpg" alt="produk 1">
+            <img src="img/produk1.jpg" alt="produk 1">
           </div>
           <div class="product-content">
             <h3>
@@ -268,6 +317,29 @@
 
     </footer>
     <!-- footer section end -->
+
+    <!-- Modal box item detail start-->
+     <div class="modal" id="item-detail-modal">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/produk1.jpg" alt="produk 1">
+          <div class="product-content">
+            <h3>Produk 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione excepturi vel consequuntur, praesentium saepe debitis?</p>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 30K <span>IDR 55K</span></div>
+            <a href="#"><i data-feather="shopping-cart"></i><span>add to cart</span></a>
+          </div>
+      </div>
+     </div>
+    <!-- Modal box item detail end -->
 
     <script>
       feather.replace();
